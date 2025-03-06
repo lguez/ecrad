@@ -1,0 +1,63 @@
+{
+    "Control": {
+        "command": [
+            "$scr_dir/bin/ecrad",
+            "$PWD/control_nml.txt",
+            "$scr_dir/practical/era5slice.nc",
+            "ecrad_out.nc"
+        ],
+        "symlink": [
+            "$scr_dir/data/RADRRTM",
+            "$scr_dir/data/RADSRTM",
+            "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
+            "$scr_dir/data/fu_ice_scattering_rrtm.nc",
+	    "$scr_dir/data/aerosol_ifs_rrtm_46R1_with_NI_AM.nc"
+        ],
+        "sel_diff_args": {
+            "ign_att": [
+                "history"
+            ]
+        }
+    },
+    "Aer_LMDZ": {
+        "command": [
+            "$scr_dir/bin/ecrad",
+            "$PWD/LMDZ_optics_nml.txt",
+            "$scr_dir/practical/era5slice.nc",
+            "ecrad_out.nc"
+        ],
+        "symlink": [
+            "$scr_dir/data/RADRRTM",
+            "$scr_dir/data/RADSRTM",
+            "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
+            "$scr_dir/data/fu_ice_scattering_rrtm.nc",
+            "$PWD/aer_opt_LMDZ_RRTMG_filled.nc"
+        ],
+        "sel_diff_args": {
+            "ign_att": [
+                "history"
+            ]
+        }
+    },
+    "Atm_LMDZ": {
+        "command": [
+            "$scr_dir/bin/ecrad",
+            "$PWD/LMDZ_aer_nml.txt",
+            "$PWD/inputs.nc",
+            "ecrad_out.nc"
+        ],
+        "symlink": [
+            "$scr_dir/data/RADRRTM",
+            "$scr_dir/data/RADSRTM",
+            "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
+            "$scr_dir/data/fu_ice_scattering_rrtm.nc",
+            "$PWD/aer_opt_LMDZ_RRTMG_filled.nc"
+        ],
+        "sel_diff_args": {
+            "ign_att": [
+                "history"
+            ]
+        },
+        "description": "Input atmospheric profiles from LMDZ."
+    }
+}
