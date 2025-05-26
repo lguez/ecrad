@@ -31,8 +31,12 @@ f90nml.patch(
 )
 print('Created file "LMDZ_optics_nml.txt".')
 
-# Aerosols of LMDZ:
-# Do not use patch because we change the length of i_aerosol_type_map:
+# Atmosphere of LMDZ. Do not use f90nml.patch because we change the
+# length of i_aerosol_type_map. Also, we have to specify albedo bands
+# because, in the input file coming from LMDZ, the albedo has 6
+# bands. We did not need to specify albedo bands with the input file
+# from ERA5 because there was a single albedo value for the shortwave
+# in this file.
 nml = f90nml.read("LMDZ_optics_nml.txt")
 nml["radiation"].update(
     {
