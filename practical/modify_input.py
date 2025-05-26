@@ -31,7 +31,8 @@ f90nml.patch(
 )
 print('Created file "LMDZ_optics_nml.txt".')
 
-# Aerosols of LMDZ with optical properties of LMDZ aerosols:
+# Aerosols of LMDZ:
+# Do not use patch because we change the length of i_aerosol_type_map:
 nml = f90nml.read("LMDZ_optics_nml.txt")
 nml["radiation"].update(
     {
@@ -46,6 +47,6 @@ nml["radiation"].update(
         ],
         "i_sw_albedo_index": [1, 2, 3, 4, 5, 6],
     }
-)  # do not use patch because we change the length of i_aerosol_type_map
+)
 nml.write("LMDZ_aer_nml.txt", force=True)
 print('Created file "LMDZ_aer_nml.txt".')

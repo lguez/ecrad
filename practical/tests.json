@@ -1,5 +1,6 @@
 {
     "Control": {
+        "description": "This is the control experiment described in ecrad_practical.pdf.",
         "command": [
             "$scr_dir/bin/ecrad",
             "$PWD/control_nml.txt",
@@ -11,7 +12,7 @@
             "$scr_dir/data/RADSRTM",
             "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
             "$scr_dir/data/fu_ice_scattering_rrtm.nc",
-	    "$scr_dir/data/aerosol_ifs_rrtm_46R1_with_NI_AM.nc"
+            "$scr_dir/data/aerosol_ifs_rrtm_46R1_with_NI_AM.nc"
         ],
         "sel_diff_args": {
             "ign_att": [
