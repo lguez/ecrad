@@ -23,7 +23,7 @@ f90nml.patch(
     "control_nml.txt",
     {
         "radiation": {
-            "aerosol_optics_override_file_name": "aer_opt_LMDZ_RRTMG_filled.nc",
+            "aerosol_optics_override_file_name": "aer_opt_LMDZ_RRTMG.nc",
             "i_aerosol_type_map": [-7, -6, -5, 1, 1, 1, -2, 3, 2, 2, -4],
         }
     },

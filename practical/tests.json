@@ -32,7 +32,7 @@
             "$scr_dir/data/RADSRTM",
             "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
             "$scr_dir/data/fu_ice_scattering_rrtm.nc",
-            "$PWD/aer_opt_LMDZ_RRTMG_filled.nc"
+            "$PWD/aer_opt_LMDZ_RRTMG.nc"
         ],
         "sel_diff_args": {
             "ign_att": [
@@ -52,7 +52,7 @@
             "$scr_dir/data/RADSRTM",
             "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
             "$scr_dir/data/fu_ice_scattering_rrtm.nc",
-            "$PWD/aer_opt_LMDZ_RRTMG_filled.nc"
+            "$PWD/aer_opt_LMDZ_RRTMG.nc"
         ],
         "sel_diff_args": {
             "ign_att": [
