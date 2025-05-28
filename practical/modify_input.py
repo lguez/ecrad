@@ -27,9 +27,9 @@ f90nml.patch(
             "i_aerosol_type_map": [-7, -6, -5, 1, 1, 1, -2, 3, 2, 2, -4],
         }
     },
-    "LMDZ_optics_nml.txt",
+    "aer_LMDZ_nml.txt",
 )
-print('Created file "LMDZ_optics_nml.txt".')
+print('Created file "aer_LMDZ_nml.txt".')
 
 # Atmosphere of LMDZ. Do not use f90nml.patch because we change the
 # length of i_aerosol_type_map. Also, we have to specify albedo bands
@@ -37,7 +37,7 @@ print('Created file "LMDZ_optics_nml.txt".')
 # bands. We did not need to specify albedo bands with the input file
 # from ERA5 because there was a single albedo value for the shortwave
 # in this file.
-nml = f90nml.read("LMDZ_optics_nml.txt")
+nml = f90nml.read("aer_LMDZ_nml.txt")
 nml["radiation"].update(
     {
         "n_aerosol_types": 13,
@@ -52,5 +52,5 @@ nml["radiation"].update(
         "i_sw_albedo_index": [1, 2, 3, 4, 5, 6],
     }
 )
-nml.write("LMDZ_aer_nml.txt", force=True)
-print('Created file "LMDZ_aer_nml.txt".')
+nml.write("atm_LMDZ_nml.txt", force=True)
+print('Created file "atm_LMDZ_nml.txt".')

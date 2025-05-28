@@ -23,7 +23,7 @@
     "Aer_LMDZ": {
         "command": [
             "$scr_dir/bin/ecrad",
-            "$PWD/Modified_input/LMDZ_optics_nml.txt",
+            "$PWD/Modified_input/aer_LMDZ_nml.txt",
             "$scr_dir/practical/era5slice.nc",
             "ecrad_out.nc"
         ],
@@ -43,7 +43,7 @@
     "Atm_LMDZ": {
         "command": [
             "$scr_dir/bin/ecrad",
-            "$PWD/Modified_input/LMDZ_aer_nml.txt",
+            "$PWD/Modified_input/atm_LMDZ_nml.txt",
             "$PWD/inputs.nc",
             "ecrad_out.nc"
         ],
