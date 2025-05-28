@@ -32,7 +32,7 @@
             "$scr_dir/data/RADSRTM",
             "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
             "$scr_dir/data/fu_ice_scattering_rrtm.nc",
-            "$PWD/aer_opt_LMDZ_RRTMG.nc"
+            "$aerosol_optics_tests/Fill_RRTMG/aer_opt_LMDZ_RRTMG.nc"
         ],
         "sel_diff_args": {
             "ign_att": [
@@ -44,7 +44,7 @@
         "command": [
             "$scr_dir/bin/ecrad",
             "$PWD/Modified_input/atm_LMDZ_nml.txt",
-            "$PWD/inputs.nc",
+            "$aerosol_forcing_tests/Save_inputs/inputs.nc",
             "ecrad_out.nc"
         ],
         "symlink": [
@@ -52,7 +52,7 @@
             "$scr_dir/data/RADSRTM",
             "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
             "$scr_dir/data/fu_ice_scattering_rrtm.nc",
-            "$PWD/aer_opt_LMDZ_RRTMG.nc"
+            "$aerosol_optics_tests/Fill_RRTMG/aer_opt_LMDZ_RRTMG.nc"
         ],
         "sel_diff_args": {
             "ign_att": [
