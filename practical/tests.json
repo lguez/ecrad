@@ -2,17 +2,17 @@
     "Control": {
         "description": "This is the control experiment described in ecrad_practical.pdf.",
         "command": [
-            "$scr_dir/bin/ecrad",
+            "$src_dir/bin/ecrad",
             "$PWD/Modified_input/control_nml.txt",
-            "$scr_dir/practical/era5slice.nc",
+            "$src_dir/practical/era5slice.nc",
             "ecrad_out.nc"
         ],
         "symlink": [
-            "$scr_dir/data/RADRRTM",
-            "$scr_dir/data/RADSRTM",
-            "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
-            "$scr_dir/data/fu_ice_scattering_rrtm.nc",
-            "$scr_dir/data/aerosol_ifs_rrtm_46R1_with_NI_AM.nc"
+            "$src_dir/data/RADRRTM",
+            "$src_dir/data/RADSRTM",
+            "$src_dir/data/socrates_droplet_scattering_rrtm.nc",
+            "$src_dir/data/fu_ice_scattering_rrtm.nc",
+            "$src_dir/data/aerosol_ifs_rrtm_46R1_with_NI_AM.nc"
         ],
         "sel_diff_args": {
             "ign_att": [
@@ -22,16 +22,16 @@
     },
     "Aer_LMDZ": {
         "command": [
-            "$scr_dir/bin/ecrad",
+            "$src_dir/bin/ecrad",
             "$PWD/Modified_input/aer_LMDZ_nml.txt",
-            "$scr_dir/practical/era5slice.nc",
+            "$src_dir/practical/era5slice.nc",
             "ecrad_out.nc"
         ],
         "symlink": [
-            "$scr_dir/data/RADRRTM",
-            "$scr_dir/data/RADSRTM",
-            "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
-            "$scr_dir/data/fu_ice_scattering_rrtm.nc",
+            "$src_dir/data/RADRRTM",
+            "$src_dir/data/RADSRTM",
+            "$src_dir/data/socrates_droplet_scattering_rrtm.nc",
+            "$src_dir/data/fu_ice_scattering_rrtm.nc",
             "$aerosol_optics_tests/Fill_RRTMG/aer_opt_LMDZ_RRTMG.nc"
         ],
         "sel_diff_args": {
@@ -42,16 +42,16 @@
     },
     "Atm_LMDZ": {
         "command": [
-            "$scr_dir/bin/ecrad",
+            "$src_dir/bin/ecrad",
             "$PWD/Modified_input/atm_LMDZ_nml.txt",
             "$aerosol_forcing_tests/Save_inputs/inputs.nc",
             "ecrad_out.nc"
         ],
         "symlink": [
-            "$scr_dir/data/RADRRTM",
-            "$scr_dir/data/RADSRTM",
-            "$scr_dir/data/socrates_droplet_scattering_rrtm.nc",
-            "$scr_dir/data/fu_ice_scattering_rrtm.nc",
+            "$src_dir/data/RADRRTM",
+            "$src_dir/data/RADSRTM",
+            "$src_dir/data/socrates_droplet_scattering_rrtm.nc",
+            "$src_dir/data/fu_ice_scattering_rrtm.nc",
             "$aerosol_optics_tests/Fill_RRTMG/aer_opt_LMDZ_RRTMG.nc"
         ],
         "sel_diff_args": {
@@ -63,17 +63,17 @@
     },
     "ECCKD": {
         "command": [
-            "$scr_dir/bin/ecrad",
+            "$src_dir/bin/ecrad",
             "$PWD/Modified_input/ECCKD_nml.txt",
-            "$scr_dir/practical/era5slice.nc",
+            "$src_dir/practical/era5slice.nc",
             "ecrad_out.nc"
         ],
         "symlink": [
-            "$scr_dir/data/ecckd-1.4_sw_climate_rgb-32b_ckd-definition.nc",
-            "$scr_dir/data/ecckd-1.0_lw_climate_fsck-32b_ckd-definition.nc",
-            "$scr_dir/data/mie_droplet_scattering.nc",
-            "$scr_dir/data/baum-general-habit-mixture_ice_scattering.nc",
-	    "$scr_dir/data/aerosol_ifs_49R1_20230119.nc"
+            "$src_dir/data/ecckd-1.4_sw_climate_rgb-32b_ckd-definition.nc",
+            "$src_dir/data/ecckd-1.0_lw_climate_fsck-32b_ckd-definition.nc",
+            "$src_dir/data/mie_droplet_scattering.nc",
+            "$src_dir/data/baum-general-habit-mixture_ice_scattering.nc",
+	    "$src_dir/data/aerosol_ifs_49R1_20230119.nc"
         ],
         "sel_diff_args": {
             "ign_att": [
@@ -83,16 +83,16 @@
     },
     "Atm_LMDZ_ECCKD": {
         "command": [
-            "$scr_dir/bin/ecrad",
+            "$src_dir/bin/ecrad",
             "$PWD/Modified_input/atm_LMDZ_ECCKD_nml.txt",
             "$aerosol_forcing_tests/Save_inputs/inputs.nc",
             "ecrad_out.nc"
         ],
         "symlink": [
-            "$scr_dir/data/ecckd-1.4_sw_climate_rgb-32b_ckd-definition.nc",
-            "$scr_dir/data/ecckd-1.0_lw_climate_fsck-32b_ckd-definition.nc",
-            "$scr_dir/data/mie_droplet_scattering.nc",
-            "$scr_dir/data/baum-general-habit-mixture_ice_scattering.nc",
+            "$src_dir/data/ecckd-1.4_sw_climate_rgb-32b_ckd-definition.nc",
+            "$src_dir/data/ecckd-1.0_lw_climate_fsck-32b_ckd-definition.nc",
+            "$src_dir/data/mie_droplet_scattering.nc",
+            "$src_dir/data/baum-general-habit-mixture_ice_scattering.nc",
 	    "$aerosol_optics_tests/Full_ECCKD/aer_opt_LMDZ_ECCKD.nc"
         ],
         "sel_diff_args": {
