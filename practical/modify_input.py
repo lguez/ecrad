@@ -52,10 +52,12 @@ nml["radiation"].update(
         "i_sw_albedo_index": [1, 2, 3, 4, 5, 6],
     }
 )
+# (13 aerosol types in LMDZ instead of 11 in the IFS)
 nml.write("atm_LMDZ_nml.txt", force=True)
 print('Created file "atm_LMDZ_nml.txt".')
 
 # Atmosphere of ERA5, ECCKD:
+
 # Do not use patch because we delete a key:
 nml = f90nml.read("control_nml.txt")
 nml["radiation"].update(
@@ -65,7 +67,13 @@ nml["radiation"].update(
         "use_general_aerosol_optics": True,
     }
 )
+
+# The file containing aerosol optical properties is not the same for
+# EECKD than for RRTMG. The file name we want is the default when
+# use_general_aerosol_optics=t, so we can just remove this entry in
+# the namelist:
 del nml["radiation"]["aerosol_optics_override_file_name"]
+
 nml.write("ECCKD_nml.txt", force=True)
 print('Created file "ECCKD_nml.txt".')
 
